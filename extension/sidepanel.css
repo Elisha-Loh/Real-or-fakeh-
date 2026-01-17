@@ -209,3 +209,12 @@ code {
   font-size: 11px;
   color: var(--muted);
 }
+
+#helpCard h2 {
+  font-size: 1.05rem;
+}
+
+#helpCard ol li {
+  font-size: 0.80rem;
+  margin-bottom: 0.5rem;
+}

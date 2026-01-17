@@ -55,42 +55,38 @@ app.post('/factcheck', async (req, res) => {
     };
 
     const schema = {
-      name: 'fact_check_result',
-      schema: {
-        type: 'object',
-        additionalProperties: false,
-        properties: {
-          verdict: {
-            type: 'string',
-            description: 'One of: True, False, Misleading, Unclear'
-          },
-          confidence: {
-            type: 'string',
-            description: 'One of: High, Medium, Low'
-          },
-          explanation: {
-            type: 'string',
-            description: 'Short explanation (2-6 sentences), focused on what sources say.'
-          },
-          sources: {
-            type: 'array',
-            description: 'Cited sources used to reach the verdict. 2-6 sources ideally.',
-            items: {
-              type: 'object',
-              additionalProperties: false,
-              properties: {
-                title: { type: 'string' },
-                url: { type: 'string' },
-                publisher: { type: 'string' },
-                date: { type: 'string', description: 'YYYY-MM-DD if possible' }
-              },
-              required: ['url']
-            }
-          }
+      type: 'object',
+      additionalProperties: false,
+      properties: {
+        verdict: {
+          type: 'string',
+          description: 'One of: True, False, Misleading, Unclear'
         },
-        required: ['verdict', 'confidence', 'explanation', 'sources']
+        confidence: {
+          type: 'string',
+          description: 'One of: High, Medium, Low'
+        },
+        explanation: {
+          type: 'string',
+          description: 'Short explanation (2-6 sentences), focused on what sources say.'
+        },
+        sources: {
+          type: 'array',
+          description: 'Cited sources used to reach the verdict. 2-6 sources ideally.',
+          items: {
+            type: 'object',
+            additionalProperties: false,
+            properties: {
+              title: { type: 'string' },
+              url: { type: 'string' },
+              publisher: { type: 'string' },
+              date: { type: 'string', description: 'YYYY-MM-DD if possible' }
+            },
+            required: ['url']
+          }
+        }
       },
-      strict: true
+      required: ['verdict', 'confidence', 'explanation', 'sources']
     };
 
     const payload = {
@@ -101,7 +97,9 @@ app.post('/factcheck', async (req, res) => {
       text: {
         format: {
           type: 'json_schema',
-          json_schema: schema
+          name: 'fact_check_result',
+          strict: false,
+          schema,
         }
       },
       // Helpful for debugging: includes tool sources
