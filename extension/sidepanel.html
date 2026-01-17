@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Fact Checker</title>
+    <link rel="stylesheet" href="sidepanel.css" />
+  </head>
+  <body>
+    <header>
+      <div class="title">
+        <div class="badge">FC</div>
+        <div>
+          <h1>Fact Checker</h1>
+          <p class="subtitle">Highlight text → right-click → “Fact-check”</p>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="card">
+        <label for="claim">Claim</label>
+        <textarea id="claim" rows="4" placeholder="Paste or highlight a claim, then click Check…"></textarea>
+
+        <div class="row">
+          <button id="checkBtn">Check</button>
+          <button id="clearBtn" class="secondary">Clear</button>
+        </div>
+
+        <div class="meta" id="meta"></div>
+      </section>
+
+      <section class="card" id="statusCard" hidden>
+        <div class="status" id="status"></div>
+      </section>
+
+      <section class="card" id="resultCard" hidden>
+        <div class="verdictRow">
+          <span class="pill" id="verdictPill">—</span>
+          <span class="confidence" id="confidence">—</span>
+        </div>
+
+        <h2>Explanation</h2>
+        <p id="explanation" class="explanation"></p>
+
+        <h2>Sources</h2>
+        <ul id="sources" class="sources"></ul>
+
+        <details class="raw" id="rawBox" hidden>
+          <summary>Raw response</summary>
+          <pre id="raw"></pre>
+        </details>
+      </section>
+
+      <section class="card" id="helpCard">
+        <h2>How it works</h2>
+        <ol>
+          <li>Highlight a sentence on any site.</li>
+          <li>Right-click → <strong>Fact-check</strong>.</li>
+          <li>This panel shows a verdict + credible sources from your backend.</li>
+        </ol>
+        <p class="tiny">Tip: You can also paste a claim into the box and click Check.</p>
+      </section>
+    </main>
+
+    <footer>
+      <span class="tiny">Your claim is sent to your backend. Configure it in <code>config.js</code>.</span>
+    </footer>
+
+    <script type="module" src="sidepanel.js"></script>
+  </body>
+</html>
