@@ -135,11 +135,6 @@ async function runCheck({ claim, url } = {}) {
       sourcesEl.appendChild(li);
     }
 
-    // Optional raw debug
-    if (data.raw) {
-      rawBox.hidden = false;
-      rawEl.textContent = typeof data.raw === 'string' ? data.raw : JSON.stringify(data.raw, null, 2);
-    }
   } catch (err) {
     setStatus(String(err?.message || err));
     resultCard.hidden = true;
