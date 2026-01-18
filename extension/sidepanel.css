@@ -35,12 +35,8 @@ header {
   width: 36px;
   height: 36px;
   border-radius: 10px;
-  background: rgba(110,231,183,0.18);
-  border: 1px solid rgba(110,231,183,0.35);
-  display: grid;
-  place-items: center;
-  font-weight: 800;
-  letter-spacing: 0.5px;
+  object-fit: contain;
+  flex-shrink: 0;
 }
 
 h1 {
