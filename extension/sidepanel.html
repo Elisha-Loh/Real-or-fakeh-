@@ -3,15 +3,15 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Fact Checker</title>
+    <title>For Real Meh?</title>
     <link rel="stylesheet" href="sidepanel.css" />
   </head>
   <body>
     <header>
       <div class="title">
-        <div class="badge">FC</div>
+        <img class="badge" src="icons/icon48.png" alt="For Real Meh?" />
         <div>
-          <h1>Fact Checker</h1>
+          <h1>For Real Meh?</h1>
           <p class="subtitle">Highlight text → right-click → “Fact-check”</p>
         </div>
       </div>
@@ -40,6 +40,10 @@
           <span class="confidence" id="confidence">—</span>
         </div>
 
+        <p class="disclaimer" style="color: red; font-weight: bold;">
+          Disclaimer: Please check the sources, especially if the verdict is Misleading/Unclear!
+        </p>
+
         <h2>Explanation</h2>
         <p id="explanation" class="explanation"></p>
 
@@ -64,7 +68,6 @@
     </main>
 
     <footer>
-      <span class="tiny">Your claim is sent to your backend. Configure it in <code>config.js</code>.</span>
     </footer>
 
     <script type="module" src="sidepanel.js"></script>

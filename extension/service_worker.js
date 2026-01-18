@@ -1,4 +1,4 @@
-// Highlight Fact Checker - Service Worker (Manifest V3)
+// For Real Meh? - Service Worker (Manifest V3)
 // Creates a context menu item for highlighted text, opens the side panel,
 // and passes the claim to the side panel UI.
 

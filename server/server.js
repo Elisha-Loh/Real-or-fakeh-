@@ -54,7 +54,7 @@ app.post('/factcheck', async (req, res) => {
         'Return your answer in the required JSON format.'
     };
 
-    const schema = {
+    const jsonSchema = {
       type: 'object',
       additionalProperties: false,
       properties: {
@@ -98,8 +98,8 @@ app.post('/factcheck', async (req, res) => {
         format: {
           type: 'json_schema',
           name: 'fact_check_result',
-          strict: false,
-          schema,
+          json_schema: jsonSchema,
+          strict: true
         }
       },
       // Helpful for debugging: includes tool sources
