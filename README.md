@@ -1,4 +1,4 @@
-# For real meh? 
+# For Real Meh? 
 
 This project includes:
 - **Chrome extension** that adds a right-click **Fact-check** menu for highlighted text and displays results in a **side panel**.

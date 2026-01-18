@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Highlight Fact Checker",
+  "name": "For Real Meh?",
   "version": "1.0.0",
   "description": "Highlight text on any page and get a sourced fact-check in a side panel.",
   "permissions": [
@@ -19,7 +19,7 @@
     "default_path": "sidepanel.html"
   },
   "action": {
-    "default_title": "Open Fact Checker"
+    "default_title": "Open For Real Meh?"
   },
   "icons": {
     "16": "icons/icon16.png",
