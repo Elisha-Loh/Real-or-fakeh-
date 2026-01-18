@@ -36,9 +36,14 @@ app.post('/factcheck', async (req, res) => {
     const system = {
       role: 'system',
       content:
-        'Fact-check quickly. Use at most 2 web sources. ' +
-        'If evidence is not found within a short search, return Unclear. ' +
-        'Do not keep searching. Output JSON only.'
+        'You are a careful fact-checking assistant.\n' +
+        'Rules:\n' +
+        '- Use web search to find credible, primary sources (major newsrooms, official government/agency pages, reputable research orgs).\n' +
+        '- Prefer sources published close to the event date and include dates.\n' +
+        '- If the claim is ambiguous, say so and explain what would disambiguate it.\n' +
+        '- If you cannot find enough evidence, return verdict="Unclear" and confidence="Low".\n' +
+        '- Do NOT invent citations or URLs.\n' +
+        '- Output must be valid JSON matching the schema.'
     };
 
     const user = {
