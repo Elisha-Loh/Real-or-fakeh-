@@ -37,6 +37,7 @@ app.post('/factcheck', async (req, res) => {
       role: 'system',
       content:
         'Fact-check quickly. Use at most 2 web sources. ' +
+        'Try to choose credible, primary sources (major newsrooms, official government/agency pages, reputable research orgs).. ' +
         'If evidence is not found within a short search, return Unclear. ' +
         'Do not keep searching. Output JSON only.'
     };
