@@ -1,7 +1,7 @@
-# Highlight Fact Checker (Chrome Extension + Backend)
+# For real meh? 
 
 This project includes:
-- **Chrome extension (Manifest V3)** that adds a right-click **Fact-check** menu for highlighted text and displays results in a **side panel**.
+- **Chrome extension** that adds a right-click **Fact-check** menu for highlighted text and displays results in a **side panel**.
 - **Backend server** (Node/Express) that calls the **OpenAI Responses API** with the **web search tool** to return a verdict *with sources*.
 
 > Why a backend? Never put your OpenAI API key inside an extension — it can be extracted.
